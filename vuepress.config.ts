@@ -32,11 +32,9 @@ export default defineUserConfig({
   // 主题配置 FileList 是 vuepress 的一个主题，文件展示的功能全部由这个主题提供。
   theme: FileList([
     {
-  mountPath:"/example",
-  analysis:fileUrlTreeAnalysis({
-    "/test.jpg":"https://blog.qiyao.us.kg/images/avatar.jpg"
-  }),
-  }
+      mountPath:"/",
+      analysis:githubReleasesFilesAnalysis({user:"jianjianai", repository:"FList"})
+    }
     // ... 可以配置多个挂载路径和仓库，以此类推
   ])
 })
